@@ -14,6 +14,10 @@ app.use(cors())
 
 app.use(express.json())
 
+
+const routes = require('./routes/route')
+app.use(routes)
+
 app.listen(port, host, ()=>{
     console.log(`Server started at http://${host}:${port}`)
 })
